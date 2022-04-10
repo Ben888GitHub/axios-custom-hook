@@ -1,25 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import FirstExample1 from './component/FirstExample1';
+import FirstExample2 from './component/FirstExample2';
+import SecondExample from './component/SecondExample';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<h1>Custom Hook Axios</h1>
+			<FirstExample1 />
+			<br />
+			<FirstExample2 />
+			<br />
+			<SecondExample />
+		</div>
+	);
 }
 
 export default App;

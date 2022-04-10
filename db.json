@@ -1,0 +1,19 @@
+{
+  "tools": [
+    {
+      "id": 1,
+      "name": "NextJs",
+      "description": "Best SSR and Full Stack Framework"
+    },
+    {
+      "id": 0.36954226182329,
+      "name": "Supabase",
+      "description": "One of the best BAAS"
+    },
+    {
+      "id": 0.2041494918879645,
+      "name": "Redux Toolkit",
+      "description": "State Management for Large Apps"
+    }
+  ]
+}
