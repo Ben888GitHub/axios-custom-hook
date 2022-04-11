@@ -29,9 +29,6 @@ export const useAxios = (axiosParams) => {
 			// request() is to accept the http method, url, headers, and data
 			const result = await axios.request(axiosParams);
 			setIsLoading(false);
-			// setResponse(result.data);
-			console.log(result);
-			console.log(axiosParams);
 			setResponse([...response, result.data]);
 			// console.log(result.data);
 		} catch (error) {
@@ -45,9 +42,6 @@ export const useAxios = (axiosParams) => {
 			// request() is to accept the http method, url, headers, and data
 			const result = await axios.request(axiosParams);
 			setIsLoading(false);
-			// setResponse(result.data);
-			console.log(result);
-			console.log(axiosParams);
 			setResponse(response.filter((tool) => tool.id !== axiosParams.data.id));
 			// console.log(result.data);
 		} catch (error) {

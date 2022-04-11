@@ -1,42 +1,14 @@
 import { useState, Fragment } from 'react';
-import { useAxios } from '../axios-hooks/AxiosHooks2';
+import useApiFunctions from './useApiFunctions';
 
-function SecondExample() {
+const SecondExample2 = () => {
+	const { handleAddTool, handleDeleteTool, isLoading, response, error } =
+		useApiFunctions();
+
 	const [value, setValue] = useState({
 		name: '',
 		description: ''
 	});
-
-	const { response, error, isLoading, addTool, deleteTool } = useAxios();
-	// console.log(response);
-
-	const handleAddTool = () => {
-		addTool({
-			method: 'POST',
-			url: 'http://localhost:3001/tools',
-			headers: {
-				accept: '*/*'
-			},
-			data: {
-				id: Math.random(),
-				name: value.name,
-				description: value.description
-			}
-		});
-	};
-
-	const handleDeleteTool = (id) => {
-		deleteTool({
-			method: 'DELETE',
-			url: `http://localhost:3001/tools/${id}`,
-			headers: {
-				accept: '*/*'
-			},
-			data: {
-				id: id
-			}
-		});
-	};
 
 	const handleChange = (e) => {
 		setValue({
@@ -44,6 +16,7 @@ function SecondExample() {
 			[e.target.name]: e.target.value
 		});
 	};
+
 	return (
 		<>
 			<h1>Tools</h1>
@@ -94,11 +67,11 @@ function SecondExample() {
 						<option value="NoSQL Database">NoSQL Database</option>
 					</select>
 					<br />
-					<button onClick={handleAddTool}>Add Tool</button>
+					<button onClick={() => handleAddTool(value)}>Add Tool</button>
 				</>
 			)}
 		</>
 	);
-}
+};
 
-export default SecondExample;
+export default SecondExample2;
