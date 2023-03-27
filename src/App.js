@@ -14,9 +14,9 @@ function App() {
 			<br />
 			{/* <SecondExample /> */}
 			{/* <br /> */}
-			<Suspense fallback={<p>Loading...</p>}>
+			{/* <Suspense fallback={<p>Loading...</p>}>
 				<SecondExample2 />
-			</Suspense>
+			</Suspense> */}
 		</div>
 	);
 }
